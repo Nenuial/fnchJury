@@ -1,0 +1,63 @@
+project:
+  type: website
+
+website:
+  title: "FSSE Jury"
+  search: false
+  navbar:
+    logo: img/fsse_blue.png
+    background: light
+    left:
+      - href: index.qmd
+        text: Accueil
+
+  sidebar:
+    collapse-level: 1
+    contents:
+      - section: "Saison 2022"
+        contents:
+          - saisons/2022/Fenin.qmd
+          - saisons/2022/Poliez-le-Grand.qmd
+          - saisons/2022/Crete.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    execute:
+      echo: false
+  pdf:
+    pdf-engine: xelatex
+    paper: a4
+    mainfont: "FiraSans"
+    mainfontoptions:
+      - Ligatures=TeX
+      - Path = /Library/Fonts/
+      - UprightFont = *-Light
+      - ItalicFont = *-LightItalic
+      - BoldFont = *-Regular
+      - BoldItalicFont = *-Italic
+    classoption: landscape
+    logo: img/fsse_blue.png
+    geometry:
+      - bindingoffset=0in
+      - headheight=35pt
+      - left=2cm
+      - right=2cm
+      - top=2.5cm
+      - bottom=2cm
+      - headsep=.5cm
+      - footskip=1cm
+    template-partials:
+      - partials/title.tex
+      - partials/pandoc.tex
+      - partials/before-body.tex
+    include-in-header:
+      text: \usepackage{lastpage}
+    execute:
+      echo: false
+      warning: false
+
+editor: visual
+

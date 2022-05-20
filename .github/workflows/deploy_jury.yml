@@ -1,0 +1,53 @@
+on:
+  workflow_dispatch
+
+env:
+  RENV_PATHS_ROOT: ~/.local/share/renv
+
+name: Jury-Plan
+
+jobs:
+  jury-plan:
+    name: Deploy Jury Plan
+    runs-on: macOS-latest
+    env:
+      GITHUB_PAT: ${{ secrets.R_GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v1
+      - uses: r-lib/actions/setup-r@v1
+
+      - name: Install Quarto
+        uses: quarto-dev/quarto-actions/install-quarto@v1
+        with:
+          tinytex: true
+
+      - name: Install Notion client library
+        run: pip3 install --upgrade notion-client
+
+      - name: Adding GITHUB PAT
+        run: echo "${{ secrets.R_GITHUB_PAT }}" >> ~/.renviron
+
+      - name: Adding NOTION API key
+        run: echo "${{ secrets.R_NOTION_API }}" >> ~/.renviron
+
+      - name: Install R packages
+        uses: r-lib/actions/setup-r-dependencies@v1
+
+      - name: Install FiraSans and FiraMath
+        run: Rscript -e 'rsvps::fnch_install_fonts_macos(system_wide = TRUE)'
+
+      - name: Render website to all format
+        run: |
+          quarto render
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: 'placeholder'
+
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy with rsync
+        run: rsync -avz _public/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/fsse-jury

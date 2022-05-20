@@ -1,0 +1,30 @@
+---
+title: "Fenin"
+subtitle: "Plan du Jury"
+params:
+  place:     "Fenin"
+  startdate: "2022-04-15"
+  enddate:   "2022-04-17"
+  
+format:
+  html: default
+  pdf: default
+---
+
+::: {.column-screen-inset-right .content-visible when-format="html"}
+```{r eval=knitr::is_html_output()}
+rsvps::fnch_reactable_jury(
+  params$place, 
+  params$startdate,
+  params$enddate
+)
+```
+:::
+
+```{r eval=knitr::is_latex_output(), results='asis'}
+rsvps::fnch_pdftable_jury(
+  params$place, 
+  params$startdate,
+  params$enddate
+)
+```
