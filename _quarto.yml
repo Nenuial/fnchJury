@@ -18,6 +18,7 @@ website:
         contents:
           - saisons/2022/Fenin.qmd
           - saisons/2022/Poliez-le-Grand.qmd
+          - saisons/2022/Crete.qmd
 
 format:
   html:
