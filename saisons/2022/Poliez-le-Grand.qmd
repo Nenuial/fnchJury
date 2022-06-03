@@ -11,7 +11,6 @@ format:
   pdf: default
 ---
 
-::: {.column-screen-inset-right .content-visible when-format="html"}
 ```{r eval=knitr::is_html_output()}
 rsvps::fnch_reactable_jury(
   params$place, 
@@ -19,7 +18,6 @@ rsvps::fnch_reactable_jury(
   params$enddate
 )
 ```
-:::
 
 ```{r eval=knitr::is_latex_output(), results='asis'}
 rsvps::fnch_pdftable_jury(
