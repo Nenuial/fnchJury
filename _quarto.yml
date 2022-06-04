@@ -33,7 +33,6 @@ format:
     mainfont: "FiraSans"
     mainfontoptions:
       - Ligatures=TeX
-      - Path = /Library/Fonts/
       - UprightFont = *-Light
       - ItalicFont = *-LightItalic
       - BoldFont = *-Regular
@@ -43,8 +42,8 @@ format:
     geometry:
       - bindingoffset=0in
       - headheight=35pt
-      - left=2cm
-      - right=2cm
+      - left=1.5cm
+      - right=1.5cm
       - top=2.5cm
       - bottom=2cm
       - headsep=.5cm
