@@ -20,3 +20,4 @@ jobs:
         script: |
           cd /var/www/fsse-jury
           quarto render
+          cp -ru _site www
