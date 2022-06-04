@@ -19,5 +19,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /var/www/fsse-jury
+          git pull
           quarto render
           cp -ru _site www
