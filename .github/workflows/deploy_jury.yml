@@ -21,4 +21,4 @@ jobs:
           cd /var/www/fsse-jury
           git pull
           quarto render
-          cp -ru _site www
+          cp -rf _site www
