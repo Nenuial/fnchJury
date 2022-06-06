@@ -1,6 +1,9 @@
 project:
   type: website
 
+execute:
+  freeze: false
+
 website:
   title: "FSSE Jury"
   search: false
