@@ -19,9 +19,10 @@ website:
     contents:
       - section: "Saison 2022"
         contents:
-          - saisons/2022/Fenin.qmd
+          - saisons/2022/Fenin_ACEF.qmd
           - saisons/2022/Poliez-le-Grand.qmd
           - saisons/2022/Crete.qmd
+          - saisons/2022/Fenin.qmd
 
 format:
   html:

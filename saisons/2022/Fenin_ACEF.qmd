@@ -1,10 +1,10 @@
 ---
-title: "Fenin"
+title: "Fenin ACEF"
 subtitle: "Plan du Jury"
 params:
   place:     "Fenin"
-  startdate: "2022-07-27"
-  enddate:   "2022-07-31"
+  startdate: "2022-04-15"
+  enddate:   "2022-04-17"
   
 format:
   html: default
