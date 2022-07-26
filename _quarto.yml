@@ -43,6 +43,7 @@ format:
       - BoldFont = *-Regular
       - BoldItalicFont = *-Italic
     classoption: landscape
+    colorlinks: false
     logo: img/fsse_blue.png
     geometry:
       - bindingoffset=0in
