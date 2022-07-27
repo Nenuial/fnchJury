@@ -1,9 +1,6 @@
 on:
   workflow_dispatch
 
-env:
-  RENV_PATHS_ROOT: ~/.local/share/renv
-
 name: Jury-Plan
 
 jobs:
@@ -12,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Connect to Aeluin and update site
-      uses: appleboy/ssh-action@master
+      uses: D3rHase/ssh-command-action@v0.2.1
       with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        script: |
+        HOST: ${{ secrets.SSH_HOST }}
+        USER: ${{ secrets.SSH_USER }}
+        PRIVATE_SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        COMMAND: |
           cd /var/www/fsse-jury
           git pull
           quarto render
