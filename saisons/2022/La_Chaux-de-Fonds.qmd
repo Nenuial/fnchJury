@@ -1,0 +1,28 @@
+---
+title: "La Chaux-de-Fonds"
+subtitle: "Plan du Jury"
+params:
+  place:     "La Chaux-de-Fonds"
+  startdate: "2022-09-28"
+  enddate:   "2022-10-02"
+  
+format:
+  html: default
+  pdf: default
+---
+
+```{r eval=knitr::is_html_output()}
+rsvps::fnch_reactable_jury(
+  params$place, 
+  params$startdate,
+  params$enddate
+)
+```
+
+```{r eval=knitr::is_latex_output(), results='asis'}
+rsvps::fnch_pdftable_jury(
+  params$place, 
+  params$startdate,
+  params$enddate
+)
+```

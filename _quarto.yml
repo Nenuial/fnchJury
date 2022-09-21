@@ -23,6 +23,7 @@ website:
           - saisons/2022/Poliez-le-Grand.qmd
           - saisons/2022/Crete.qmd
           - saisons/2022/Fenin.qmd
+          - saisons/2022/La_Chaux-de-Fonds.qmd
 
 format:
   html:
@@ -34,7 +35,7 @@ format:
       warning: false
   pdf:
     pdf-engine: xelatex
-    paper: a4
+    papersize: a4
     mainfont: "FiraSans"
     mainfontoptions:
       - Ligatures=TeX
