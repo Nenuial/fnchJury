@@ -17,6 +17,9 @@ website:
   sidebar:
     collapse-level: 1
     contents:
+      - section: "Saison 2023"
+        contents:
+          - saisons/2023/Fenin_ACEF.qmd
       - section: "Saison 2022"
         contents:
           - saisons/2022/Fenin_ACEF.qmd
@@ -24,6 +27,7 @@ website:
           - saisons/2022/Crete.qmd
           - saisons/2022/Fenin.qmd
           - saisons/2022/La_Chaux-de-Fonds.qmd
+ 
 
 format:
   html:
