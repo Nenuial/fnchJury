@@ -3,7 +3,7 @@ title: "Poliez-le-Grand"
 subtitle: "Plan du Jury"
 params:
   place:     "Poliez-le-Grand"
-  startdate: "2023-05-20"
+  startdate: "2023-05-19"
   enddate:   "2023-05-21"
   
 format:
