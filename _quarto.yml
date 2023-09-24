@@ -23,6 +23,7 @@ website:
           - saisons/2023/Poliez-le-Grand.qmd
           - saisons/2023/Crete.qmd
           - saisons/2023/Fenin.qmd
+          - saisons/2023/Crete-Ch-romands.qmd
       - section: "Saison 2022"
         contents:
           - saisons/2022/Fenin_ACEF.qmd
