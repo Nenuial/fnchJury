@@ -17,14 +17,9 @@ website:
   sidebar:
     collapse-level: 1
     contents:
-      - section: "Saison 2023"
+      - section: "Saison 2024"
         contents:
-          - saisons/2023/Fenin_ACEF.qmd
-          - saisons/2023/Poliez-le-Grand.qmd
-          - saisons/2023/Crete.qmd
-          - saisons/2023/Fenin.qmd
-          - saisons/2023/Crete-Ch-romands.qmd
-
+          - saisons/2024/Fenin_ACEF.qmd
 
 format:
   html:
