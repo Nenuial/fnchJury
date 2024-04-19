@@ -5,10 +5,10 @@ execute:
   freeze: false
 
 website:
-  title: "FSSE Jury"
+  title: "Jury"
   search: false
   navbar:
-    logo: img/fsse_blue.png
+    logo: "img/SwissEquestrian.png"
     background: light
     left:
       - href: index.qmd
@@ -41,7 +41,7 @@ format:
       - BoldItalicFont = *-Italic
     classoption: landscape
     colorlinks: false
-    logo: img/fsse_blue.png
+    logo: img/SwissEquestrian.png
     geometry:
       - bindingoffset=0in
       - headheight=35pt
