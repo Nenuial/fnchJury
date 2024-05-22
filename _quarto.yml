@@ -20,6 +20,7 @@ website:
       - section: "Saison 2024"
         contents:
           - saisons/2024/Fenin_ACEF.qmd
+          - saisons/2024/Crete.qmd
 
 format:
   html:
