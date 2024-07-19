@@ -21,6 +21,7 @@ website:
         contents:
           - saisons/2024/Fenin_ACEF.qmd
           - saisons/2024/Crete.qmd
+          - saisons/2024/Fenin.qmd
 
 format:
   html:
@@ -63,4 +64,3 @@ format:
       warning: false
 
 editor: visual
-
