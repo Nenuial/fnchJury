@@ -9,13 +9,12 @@ website:
   search: false
   navbar:
     logo: "img/SwissEquestrian.png"
-    background: light
+    background: "#00283c"
     left:
       - href: index.qmd
         text: Accueil
 
   sidebar:
-    collapse-level: 1
     contents:
       - section: "Saison 2024"
         contents:
@@ -25,8 +24,7 @@ website:
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: [cosmo, "styles.scss"]
     toc: true
     execute:
       echo: false
