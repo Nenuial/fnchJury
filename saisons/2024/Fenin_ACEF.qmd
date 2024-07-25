@@ -5,12 +5,9 @@ params:
   place:     "Fenin"
   startdate: "2024-04-24"
   enddate:   "2024-04-28"
-  
-format:
-  html: default
-  pdf: default
 ---
 
+::: {.content-visible when-format="html"}
 ```{r eval=knitr::is_html_output()}
 rsvps::fnch_reactable_jury(
   params$place, 
@@ -18,11 +15,16 @@ rsvps::fnch_reactable_jury(
   params$enddate
 )
 ```
+:::
 
-```{r eval=knitr::is_latex_output(), results='asis'}
+::: {.content-visible when-format="typst"}
+```{r}
+#| results: asis
+
 rsvps::fnch_pdftable_jury(
   params$place, 
   params$startdate,
   params$enddate
 )
 ```
+:::

@@ -3,6 +3,9 @@ project:
 
 execute:
   freeze: false
+  echo: false
+  warning: false
+  message: false
 
 website:
   title: "Jury"
@@ -29,36 +32,7 @@ format:
     execute:
       echo: false
       warning: false
-  pdf:
-    pdf-engine: xelatex
-    papersize: a4
-    mainfont: "FiraSans"
-    mainfontoptions:
-      - Ligatures=TeX
-      - UprightFont = *-Light
-      - ItalicFont = *-LightItalic
-      - BoldFont = *-Regular
-      - BoldItalicFont = *-Italic
-    classoption: landscape
-    colorlinks: false
-    logo: img/SwissEquestrian.png
-    geometry:
-      - bindingoffset=0in
-      - headheight=35pt
-      - left=1.5cm
-      - right=1.5cm
-      - top=2.5cm
-      - bottom=2cm
-      - headsep=.5cm
-      - footskip=1cm
-    template-partials:
-      - partials/title.tex
-      - partials/pandoc.tex
-      - partials/before-body.tex
-    include-in-header:
-      text: \usepackage{lastpage}
-    execute:
-      echo: false
-      warning: false
+  se-doc-typst:
+    flipped: true
 
 editor: visual

@@ -1,5 +1,6 @@
 ---
 title: "Accueil"
+format-links: []
 ---
 
 Plans de jury de mes différentes manifestations.
