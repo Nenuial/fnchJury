@@ -24,6 +24,7 @@ website:
           - saisons/2024/Fenin_ACEF.qmd
           - saisons/2024/Crete.qmd
           - saisons/2024/Fenin.qmd
+          - saisons/2024/Cheseaux.qmd
 
 format:
   html:
