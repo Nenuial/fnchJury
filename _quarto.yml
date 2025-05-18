@@ -19,12 +19,9 @@ website:
 
   sidebar:
     contents:
-      - section: "Saison 2024"
+      - section: "Saison 2025"
         contents:
-          - saisons/2024/Fenin_ACEF.qmd
-          - saisons/2024/Crete.qmd
-          - saisons/2024/Fenin.qmd
-          - saisons/2024/Cheseaux.qmd
+          - saisons/2025/Crete.qmd
 
 format:
   html:
@@ -35,5 +32,3 @@ format:
       warning: false
   se-doc-typst:
     flipped: true
-
-editor: visual

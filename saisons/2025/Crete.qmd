@@ -1,0 +1,30 @@
+---
+title: "Crête Vandœuvres"
+subtitle: "Plan du Jury"
+params:
+  place:     "Crête Vandœuvres"
+  startdate: "2025-05-22"
+  enddate:   "2025-06-09"
+---
+
+::: {.content-visible when-format="html"}
+```{r eval=knitr::is_html_output()}
+rsvps::fnch_reactable_jury(
+  params$place, 
+  params$startdate,
+  params$enddate
+)
+```
+:::
+
+::: {.content-visible when-format="typst"}
+```{r}
+#| results: asis
+
+rsvps::fnch_pdftable_jury(
+  params$place, 
+  params$startdate,
+  params$enddate
+)
+```
+:::
