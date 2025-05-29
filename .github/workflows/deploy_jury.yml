@@ -15,8 +15,7 @@ jobs:
         USER: ${{ secrets.SSH_USER }}
         PRIVATE_SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         COMMAND: |
-          cd /var/www/fsse-jury
+          cd ~/quarto/fnchJury
           git pull
           quarto render
-          rm -rf www
-          cp -rf _site www
+          rsync -av ./_site/ /srv/caddy/jury.swiss-equestrian.info/
